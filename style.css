@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  /* resetting the browser's default page margin */
+  margin: 0;
+  line-height: 1.6;
+}
+
+main {
+  /*caps line length so text stays readable on wide screens*/
+  max-width: 800px;
+  /*auto L/R margins center the fixed-width block*/
+  margin: 0 auto;
+}
+
+article {
+  /*space between teasers - em = relative to font size*/
+  margin-bottom: 2em;
+}
