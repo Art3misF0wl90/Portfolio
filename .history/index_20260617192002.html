@@ -11,13 +11,44 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <script src="scripts.js"></script>
     <!--<link rel="stylesheet" href="style.css" /> disabled while working with bootstrap, will re-enable for custom overrides later.-->
   </head>
   <!-- this is the main content area -->
   <body>
     <!-- Navigation bar -->
-    <div id="nav-placeholder"></div>
+    <nav class="navbar navbar-expand-lg">
+      <!-- bar + collapse-below-lg -->
+      <div class="container">
+        <!-- cap/center contents -->
+        <a class="navbar-brand" href="index.html">Rory Weldon</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navLinks"
+          aria-controls="navLinks"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <!-- toggle target -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Header content -->
     <header>
       <h1>Rory Weldon</h1>
@@ -38,8 +69,7 @@
                 <a href="..." class="btn btn-primary">Read More</a>
               </div>
             </article>
-          </div>
-          <div class="col-md-4">
+
             <article class="card">
               <div class="card-body">
                 <h2 class="card-title">Article Title</h2>
@@ -50,8 +80,6 @@
                 <a href="..." class="btn btn-primary">Read More</a>
               </div>
             </article>
-          </div>
-          <div class="col-md-4">
             <!-- Add more articles as needed -->
             <article class="card">
               <div class="card-body">
@@ -71,11 +99,10 @@
       <!-- Main content - Teasers for projects-->
     </main>
     <!-- Footer content -->
-    <div id="footer-placeholder"></div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <footer>
+      <a href="mailto:lweldon2@students.kennesaw.edu">Email me</a>
+      <a href="https://www.linkedin.com/in/rory-weldon-5829ab297/">LinkedIn</a>
+      <a href="https://github.com/Art3misF0wl90">GitHub</a>
+    </footer>
   </body>
 </html>

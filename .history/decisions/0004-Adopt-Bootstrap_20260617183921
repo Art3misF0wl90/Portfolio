@@ -1,0 +1,24 @@
+# ADR-0004: Adopt Bootstrap (Supersedes ADR-0002)
+
+## Status
+
+accepted
+
+## Context
+
+I have about a week and a half left for my portfolio/site to be completed. With that in mind I need a quicker way to complete what I can before the deadline. This deadline is becoming the binding constraint, forcing a revisit of the decision.
+
+## Decision
+
+I have decided to use Bootstrap, for the sites styling and layout, superseding the hand-written-CSS decision in ADR-0002.
+
+## Alternatives Considered
+The other option was handwriting CSS sheets, as decided in 0002, but with the time constraint, I have to pivot.
+
+The hybrid was another decision, but there may be just too much to manage using two different systems, and it has the chance to introduce too much complexity.
+
+## Consequences
+
+The easier part is that everything will be much faster, and a very large part of the styling will be extremely quick.
+
+The hard part is that I am loosing on CSS learning, and that this could set my learning back a bit since I'm trying to meet a deadline, and there may be more black boxes that I will have to understand at a later date.
