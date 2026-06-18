@@ -43,3 +43,40 @@ footer {
   margin-top: 3rem; /* air between page content and the footer */
   padding-top: 1.5rem; /* space between the border line and the links */
 }
+
+/* The timeline: a horizontal flex row of nodes and arrows. */
+.timeline {
+  display: flex; /* take control of the children's layout */
+  /* note: NO flex-direction here — flex defaults to row (horizontal) */
+  align-items: center; /* vertically center nodes + arrows on one line */
+  justify-content: center; /* center the whole timeline horizontally */
+  gap: 1rem; /* even space between each node and arrow */
+  padding: 1rem; /* space around the whole timeline */
+}
+
+/* Each node: a small vertical stack (label over detail), lightly boxed. */
+.timeline-node {
+  display: flex;
+  flex-direction: column; /* label above detail — same trick as the arch boxes */
+  align-items: center; /* center the label and detail within the node */
+  text-align: center; /* center multi-word detail text */
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* softly rounded corners */
+  background: #f8f9fa;
+}
+
+.node-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.node-detail {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.timeline-arrow {
+  font-size: 1.5rem;
+  color: #888;
+}
