@@ -4,35 +4,42 @@
   display: flex;
   flex-direction: column;
 
-  border: 1px solid #ccc;   /* the visible edge that makes it read as a box */
-  padding: 1rem;            /* space INSIDE the box, between edge and text */
-  background: #f8f9fa;      /* subtle fill so the box separates from the page */
+  border: 1px solid #ccc; /* the visible edge that makes it read as a box */
+  padding: 1rem; /* space INSIDE the box, between edge and text */
+  background: #f8f9fa; /* subtle fill so the box separates from the page */
 }
 
 /* The diagram container: a vertical flex column that
    spaces the layer boxes evenly and caps the width. */
 .arch-diagram {
   display: flex;
-  flex-direction: column;   /* stack the boxes vertically (override flex's default row) */
-  gap: 0.5rem;              /* even space BETWEEN each box */
-  max-width: 500px;         /* stop the diagram stretching too wide on big screens */
-  margin: 0 auto;           /* center the whole diagram horizontally */
+  flex-direction: column; /* stack the boxes vertically (override flex's default row) */
+  gap: 0.5rem; /* even space BETWEEN each box */
+  max-width: 500px; /* stop the diagram stretching too wide on big screens */
+  margin: 0 auto; /* center the whole diagram horizontally */
 }
 
 /* Center the arrows and give them a bit of presence. */
 .arch-arrow {
   text-align: center;
   font-size: 1.5rem;
-  color: #888;        /* muted grey so arrows read as connectors, not content */
+  color: #888; /* muted grey so arrows read as connectors, not content */
 }
 
 /* Layer name: the thing the eye should catch first. */
 .layer-name {
-  font-weight: bold;     /* makes the name stand out from the detail */
+  font-weight: bold; /* makes the name stand out from the detail */
 }
 
 /* Supporting detail: present but subordinate. */
 .layer-detail {
-  font-size: 0.85rem;    /* smaller than the name, so it recedes */
-  color: #555;           /* muted grey — readable but clearly secondary */
+  font-size: 0.85rem; /* smaller than the name, so it recedes */
+  color: #555; /* muted grey — readable but clearly secondary */
+}
+
+/* Visually separate the footer from page content. */
+footer {
+  border-top: 1px solid #ddd; /* thin line marking where the footer begins */
+  margin-top: 3rem; /* air between page content and the footer */
+  padding-top: 1.5rem; /* space between the border line and the links */
 }
