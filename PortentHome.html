@@ -22,16 +22,64 @@
       <section id="hero" class="container py-5">
         <header>
           <h1>Portent</h1>
-          <!-- one-line anchor: what it is, plain words -->
-          <p class="lead"><!-- e.g. an ML system that predicts stock-price direction --></p>
-          <!-- GitHub link goes here -->
+          <p class="lead">
+            An ML system that predicts stock-price direction to support informed
+            trading decisions.
+          </p>
+          <a
+            href="https://github.com/Art3misF0wl90/Portent"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View the source on GitHub</a
+          >
         </header>
       </section>
 
       <!-- SECTION 2 — THE STORY (WHY). Job: lead with judgment. The arc: v1 prototype proved it was tractable + taught me about look-ahead bias -> v2 design got bloated/disorganized, so I scrapped it -> v3 rebuilt with the formal SWE 3633 process. Ends on "couldn't trust the early results." Prose. -->
       <section id="story" class="container py-5">
-        <h2><!-- section heading, e.g. "Why I rebuilt it" --></h2>
-        <!-- narrative prose here -->
+        <h2>The Journey So Far</h2>
+        <p>
+          It all started when my friends and I wanted a way to learn and analyze
+          more about the stock market. We had some ideas for cool projects, but
+          we wanted to do something that would be both fun and educational. So
+          we decided to build a machine learning system that could predict
+          stock-price direction. We called it Portent. I was eventually the only
+          one who kept thinking about it, and then the idea of using something
+          like Claude or copilot to help build it really took hold. I wanted to
+          see if I could use these tools to build something that was actually
+          useful, and that could potentially make some movements in the stock
+          market.
+        </p>
+        <p>
+          The first version of Portent was a prototype that I built using an
+          XGBoost model. It was a lot of fun to build, and it taught me a lot
+          about machine learning and the stock market. However, I quickly
+          realized that there was a problem with my approach: first, I had no
+          clue as to what was going on at a technical level. I was just throwing
+          things together and hoping for the best. Second, I had a look-ahead
+          bias in my data that was giving me artificially high accuracy.
+        </p>
+        <p>
+          I thought I could fix the look-ahead bias by changing the way I was
+          splitting my data, but that just made the code more bloated and
+          disorganized. Then I went and decided to figure out how to redesign
+          what I had into a better architecture, in hopes that it would help the
+          results, and better yet, help me understand what the heck was going
+          on.
+        </p>
+        <p>
+          But the more I worked on the second iteration, the more I realized
+          that I couldn't trust the results I was getting. I had no idea if my
+          model was actually learning anything, or if it was just overfitting to
+          the noise in the data again. On top of that, the code space was a
+          mess. The architecture I had decided on was a good start, but the code
+          itself had high coupling and low cohesion, which made it really hard
+          to understand what was going on. I had no idea how to fix it, so I
+          just scrapped the whole thing and started over, but keeping the
+          initial architecture in mind. Hopefully, this time around, I can build
+          something that is both well-designed and well-understood, as seen
+          below.
+        </p>
       </section>
 
       <!-- SECTION 3 — THE DESIGN (PROOF). Job: prove the rigor the story claims. HERO VISUAL = the four-layer architecture diagram (Presentation -> Application -> Domain -> Data), framed as a validated decision carried forward into v3. Below it: the architecture-decision evidence. -->
