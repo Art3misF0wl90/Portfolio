@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <!-- Portent project detail page: ML stock-prediction system. Leads with the rigor/redesign story, then shows the design work as evidence. -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portent — Rory Weldon</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!--<link rel="stylesheet" href="style.css" /> disabled while working with bootstrap, will re-enable for custom overrides later.-->
+  </head>
+  <body>
+    <!-- Navigation bar (injected by scripts.js) -->
+    <div id="nav-placeholder"></div>
+
+    <main>
+      <!-- SECTION 1 — HERO / ANCHOR. Job: orient a skimmer in one second. Project name + one-line "what it is" + GitHub link. Purely descriptive; the story comes next. -->
+      <section id="hero" class="container py-5">
+        <header>
+          <h1>Portent</h1>
+          <!-- one-line anchor: what it is, plain words -->
+          <p class="lead"><!-- e.g. an ML system that predicts stock-price direction --></p>
+          <!-- GitHub link goes here -->
+        </header>
+      </section>
+
+      <!-- SECTION 2 — THE STORY (WHY). Job: lead with judgment. The arc: v1 prototype proved it was tractable + taught me about look-ahead bias -> v2 design got bloated/disorganized, so I scrapped it -> v3 rebuilt with the formal SWE 3633 process. Ends on "couldn't trust the early results." Prose. -->
+      <section id="story" class="container py-5">
+        <h2><!-- section heading, e.g. "Why I rebuilt it" --></h2>
+        <!-- narrative prose here -->
+      </section>
+
+      <!-- SECTION 3 — THE DESIGN (PROOF). Job: prove the rigor the story claims. HERO VISUAL = the four-layer architecture diagram (Presentation -> Application -> Domain -> Data), framed as a validated decision carried forward into v3. Below it: the architecture-decision evidence. -->
+      <section id="design" class="container py-5">
+        <h2><!-- section heading, e.g. "The design" --></h2>
+        <!-- four-layer architecture diagram goes here (we build this in CSS during the theming step) -->
+        <!-- architecture-decision evidence below the diagram -->
+      </section>
+
+      <!-- SECTION 4 — WHAT IT DOES + CURRENT STATE. Job: technical credibility + honest status. Compressed "what" (stack: XGBoost / LSTM / FinBERT, the pipeline, the Flask app) AND honest "where it is" (Phase 1 design, ~70% through product design; building toward implementation). Link to the repo as "see everything." -->
+      <section id="state" class="container py-5">
+        <h2><!-- section heading, e.g. "What it does & where it is" --></h2>
+        <!-- stack summary + honest current-state + repo link -->
+      </section>
+    </main>
+
+    <!-- Footer (injected by scripts.js) -->
+    <div id="footer-placeholder"></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
