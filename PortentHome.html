@@ -11,7 +11,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!--<link rel="stylesheet" href="style.css" /> disabled while working with bootstrap, will re-enable for custom overrides later.-->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation bar (injected by scripts.js) -->
@@ -38,6 +38,7 @@
       <!-- SECTION 2 — THE STORY (WHY). Job: lead with judgment. The arc: v1 prototype proved it was tractable + taught me about look-ahead bias -> v2 design got bloated/disorganized, so I scrapped it -> v3 rebuilt with the formal SWE 3633 process. Ends on "couldn't trust the early results." Prose. -->
       <section id="story" class="container py-5">
         <h2>The Journey So Far</h2>
+
         <p>
           It all started when my friends and I wanted a way to learn and analyze
           more about the stock market. We had some ideas for cool projects, but
@@ -84,9 +85,36 @@
 
       <!-- SECTION 3 — THE DESIGN (PROOF). Job: prove the rigor the story claims. HERO VISUAL = the four-layer architecture diagram (Presentation -> Application -> Domain -> Data), framed as a validated decision carried forward into v3. Below it: the architecture-decision evidence. -->
       <section id="design" class="container py-5">
-        <h2><!-- section heading, e.g. "The design" --></h2>
-        <!-- four-layer architecture diagram goes here (we build this in CSS during the theming step) -->
-        <!-- architecture-decision evidence below the diagram -->
+        <h2>The Design</h2>
+        <div class="arch-diagram">
+          <div class="arch-layer">
+            <span class="layer-name">Presentation</span>
+            <span class="layer-detail"
+              >Flask routes, real-time dashboard updates</span
+            >
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-layer">
+            <span class="layer-name">Application</span>
+            <span class="layer-detail"
+              >Onboarding pipeline, suggestion engine, alerts</span
+            >
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-layer">
+            <span class="layer-name">Domain</span>
+            <span class="layer-detail"
+              >Signal generation, feature engineering, model training</span
+            >
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-layer">
+            <span class="layer-name">Data</span>
+            <span class="layer-detail"
+              >Database access, market cache, config store</span
+            >
+          </div>
+        </div>
       </section>
 
       <!-- SECTION 4 — WHAT IT DOES + CURRENT STATE. Job: technical credibility + honest status. Compressed "what" (stack: XGBoost / LSTM / FinBERT, the pipeline, the Flask app) AND honest "where it is" (Phase 1 design, ~70% through product design; building toward implementation). Link to the repo as "see everything." -->
