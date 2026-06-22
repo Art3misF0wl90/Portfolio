@@ -1,13 +1,46 @@
-/* Each layer box is its own vertical flex column,
-   so the name stacks above its detail text. */
-.arch-layer {
-  display: flex;
-  flex-direction: column;
+/* =========================================================
+   THEME PALETTE
+   Defined once here, referenced everywhere via var(--name).
+   Change a value here and it updates across the whole site.
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700&display=swap");
 
-  border: 1px solid #ccc; /* the visible edge that makes it read as a box */
-  padding: 1rem; /* space INSIDE the box, between edge and text */
-  background: #f8f9fa; /* subtle fill so the box separates from the page */
+:root {
+  --color-bg: #16161a; /* charcoal base — not pure black (harsh) */
+  --color-surface: #1f1f26; /* slightly lighter, for cards/boxes to lift off the bg */
+  --color-text: #e4e4e7; /* soft off-white — readable body text, not pure white */
+  --color-muted: #9ca3af; /* secondary/detail text */
+  --color-blue: #4cc9f0; /* primary accent (electric blue) — links, highlights */
+  --color-purple: #a855f7; /* secondary accent (purple) — special touches */
+  --color-border: #2e2e38; /* subtle borders that show on dark without glowing */
 }
+
+/* Base canvas: dark background, soft light text, site-wide. */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+/* =========================================================
+   NAVIGATION BAR 
+   ========================================================= */
+
+/* The name in the navbar, styled as a wordmark. */
+.navbar-brand {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  /* --- gradient text (a hack — see below) --- */
+  background: linear-gradient(135deg, var(--color-blue), var(--color-purple));
+  -webkit-background-clip: text; /* clip the bg to the text shape */
+  background-clip: text; /* standard version */
+  -webkit-text-fill-color: transparent; /* make the letters see-through */
+  color: var(--color-blue); /* FALLBACK: if clip fails, solid blue */
+}
+
+/* =========================================================
+   ARCHITECTURE DIAGRAM (Portent design section)
+   ========================================================= */
 
 /* The diagram container: a vertical flex column that
    spaces the layer boxes evenly and caps the width. */
@@ -16,14 +49,17 @@
   flex-direction: column; /* stack the boxes vertically (override flex's default row) */
   gap: 0.5rem; /* even space BETWEEN each box */
   max-width: 500px; /* stop the diagram stretching too wide on big screens */
-  margin: 0 auto; /* center the whole diagram horizontally */
+  margin: 2rem auto; /* vertical breathing room + horizontal centering */
 }
 
-/* Center the arrows and give them a bit of presence. */
-.arch-arrow {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #888; /* muted grey so arrows read as connectors, not content */
+/* Each layer box is its own vertical flex column,
+   so the name stacks above its detail text. */
+.arch-layer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border); /* subtle dark edge */
+  padding: 1rem; /* space INSIDE the box, between edge and text */
+  background: var(--color-surface); /* lifts the box off the darker page */
 }
 
 /* Layer name: the thing the eye should catch first. */
@@ -34,15 +70,21 @@
 /* Supporting detail: present but subordinate. */
 .layer-detail {
   font-size: 0.85rem; /* smaller than the name, so it recedes */
-  color: #555; /* muted grey — readable but clearly secondary */
+  color: var(--color-muted); /* readable light-grey on dark */
 }
 
-/* Visually separate the footer from page content. */
-footer {
-  border-top: 1px solid #ddd; /* thin line marking where the footer begins */
-  margin-top: 3rem; /* air between page content and the footer */
-  padding-top: 1.5rem; /* space between the border line and the links */
+/* Center the arrows and give them a bit of presence. */
+.arch-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(
+    --color-muted
+  ); /* muted so arrows read as connectors, not content */
 }
+
+/* =========================================================
+   TIMELINE (Portent story section: v1 -> v2 -> v3)
+   ========================================================= */
 
 /* The timeline: a horizontal flex row of nodes and arrows. */
 .timeline {
@@ -61,9 +103,9 @@ footer {
   align-items: center; /* center the label and detail within the node */
   text-align: center; /* center multi-word detail text */
   padding: 0.75rem 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 6px; /* softly rounded corners */
-  background: #f8f9fa;
+  background: var(--color-surface);
 }
 
 .node-label {
@@ -73,18 +115,55 @@ footer {
 
 .node-detail {
   font-size: 0.8rem;
-  color: #555;
+  color: var(--color-muted);
 }
 
 .timeline-arrow {
   font-size: 1.5rem;
-  color: #888;
+  color: var(--color-muted);
 }
 
-.arch-diagram {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 500px;
-  margin: 2rem auto; /* changed from "0 auto" */
+/* =========================================================
+   BOOTSTRAP OVERRIDES (cards + buttons for dark theme)
+   These load after Bootstrap's CSS, so they win by order.
+   ========================================================= */
+
+/* Override Bootstrap's light card styling for the dark theme. */
+.card {
+  background-color: var(--color-surface); /* dark surface instead of white */
+  border-color: var(--color-border); /* subtle dark border */
+  color: var(--color-text); /* light text so card content is readable */
+}
+
+/* Buttons use the theme's blue, not Bootstrap's default blue. */
+.btn-primary {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-bg); /* dark text on the bright blue — readable contrast */
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+/* Links use the theme's blue so they're readable and on-theme. */
+a {
+  color: var(--color-blue);
+}
+
+a:hover {
+  color: var(
+    --color-purple
+  ); /* blue -> purple on hover, on-theme accent shift */
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+/* Visually separate the footer from page content. */
+footer {
+  border-top: 1px solid var(--color-border); /* subtle divider on dark */
+  margin-top: 3rem; /* air between page content and the footer */
+  padding-top: 1.5rem; /* space between the border line and the links */
 }
