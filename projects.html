@@ -11,7 +11,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" /> 
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation bar (injected by scripts.js) -->
@@ -20,9 +20,28 @@
     <main class="container py-5">
       <header>
         <h1>Projects</h1>
-        <!-- one-line intro for the catalog goes here -->
+        <p class="lead">A collection of my in-progress projects.</p>
       </header>
-      <!-- Catalog of project previews goes here. Each preview links to its detail page (PortentHome.html, SeelfHome.html, etc.). Structure TBD - likely a card grid like the home page. -->
+
+      <section class="project-list">
+        <article>
+          <h2><a href="PortentHome.html">Portent</a></h2>
+          <p>
+            Portent is a predictive analytics tool designed to help users make
+            data-driven decisions concerning the stock market.
+          </p>
+        </article>
+
+        <article>
+          <h2><a href="SeelfHome.html">Seelf</a></h2>
+          <p>
+            Seelf is an open-source student planner that unifies classes,
+            assignments, tasks, and time-blocking into one schedule.
+          </p>
+        </article>
+      </section>
+
+      <p>More projects in development...</p>
     </main>
 
     <!-- Footer (injected by scripts.js) -->
