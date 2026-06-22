@@ -102,6 +102,17 @@
       <!-- SECTION 3 — THE DESIGN (PROOF). Job: prove the rigor the story claims. HERO VISUAL = the four-layer architecture diagram (Presentation -> Application -> Domain -> Data), framed as a validated decision carried forward into v3. Below it: the architecture-decision evidence. -->
       <section id="design" class="container py-5">
         <h2>The Design</h2>
+
+        <p>
+          As seen below, the current drafted architecture of Portent is divided
+          into four layers: Presentation, Application, Domain, and Data. Each
+          layer has its own responsibilities and communicates with the other
+          layers through interfaces. This type of design allows me to better
+          test and modify the system without anything breaking, test pieces in
+          isolation, and hopefully, understand what is going on at a technical
+          level. The architecture is still in draft form, but it is a good
+          starting point for the next iteration of Portent.
+        </p>
         <div class="arch-diagram">
           <div class="arch-layer">
             <span class="layer-name">Presentation</span>
@@ -131,12 +142,47 @@
             >
           </div>
         </div>
+        <p>
+          Right now I'm working through the formal design process from my
+          software engineering coursework, which uses IEEE documentation
+          standards, and applying it to the system's design. Currently, I am
+          back at the product-design/requirements phase, and now working towards
+          the requirements specification. The goal is to have a system that is
+          both functional and maintainable, so that I can continue to improve it
+          over time.
+        </p>
       </section>
 
       <!-- SECTION 4 — WHAT IT DOES + CURRENT STATE. Job: technical credibility + honest status. Compressed "what" (stack: XGBoost / LSTM / FinBERT, the pipeline, the Flask app) AND honest "where it is" (Phase 1 design, ~70% through product design; building toward implementation). Link to the repo as "see everything." -->
       <section id="state" class="container py-5">
-        <h2><!-- section heading, e.g. "What it does & where it is" --></h2>
-        <!-- stack summary + honest current-state + repo link -->
+        <h2>Where are we now?</h2>
+        <p>
+          Portent is a system that predicts the long-term direction of stock
+          prices, up or down, instead of attempting to guess exact numbers. It's
+          built around a mix of machine learning models, primarily focused on
+          XGBoost and an LSTM, fed by market data from yfinance, along with
+          utilizing market sentiment scored by FinBERT and a set of engineered
+          features. The early prototypes wrapped all of this into a Flask web
+          application with a real-time dashboard and a front facing chatbot.
+        </p>
+
+        <p>
+          The prototypes did their job: v1 and v2 proved the concept worked,
+          (That the pipeline could run, that is), and more importantly, surfaced
+          the problems that I needed to see, including model bias and a codebase
+          that had grown bloated. The current focus is v3, the version that is
+          meant to be built right. Currently, this is in the product design
+          phase. I am working through the requirements before writing any
+          implementation code, because the lesson from the first two rounds was
+          that designing properly up front beats refactoring a mess later.
+        </p>
+
+        <a
+          href="https://github.com/Art3misF0wl90/Portent"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View the source on GitHub</a
+        >
       </section>
     </main>
 

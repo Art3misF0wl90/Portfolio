@@ -80,3 +80,11 @@ footer {
   font-size: 1.5rem;
   color: #888;
 }
+
+.arch-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 2rem auto; /* changed from "0 auto" */
+}
