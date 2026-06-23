@@ -1,4 +1,4 @@
-# Rory Weldon — Portfolio Website
+# Rory Weldon - Portfolio Website
 
 A multi-page personal portfolio built with hand-written HTML, Bootstrap 5, and a small amount of vanilla JavaScript.
 
